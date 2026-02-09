@@ -1,0 +1,922 @@
+/**
+ * Modern Calculator Design - Dynamic CSS Variables
+ * All values can be controlled from dashboard settings
+ * @package MedCalculators
+ */
+
+/* ==========================================
+   RESET & VARIABLES (overridable from settings)
+   ========================================== */
+.mcm *,
+.mcm *::before,
+.mcm *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.mcm {
+    --mcm-panel-color: #F47B4A;
+    --mcm-active-color: #1A1A1A;
+    --mcm-result-bg: #FFFFFF;
+    --mcm-text-light: #FFFFFF;
+    --mcm-text-dark: #1A1A1A;
+    --mcm-text-gray: #888888;
+    --mcm-gray-light: #EEEEEE;
+    --mcm-gray-bg: #F5F5F5;
+    --mcm-input-bg: rgba(0, 0, 0, 0.18);
+    --mcm-inactive-bg: rgba(0, 0, 0, 0.12);
+    --mcm-border-radius: 12px;
+    --mcm-panel-width: 400px;
+    --mcm-panel-padding: 40px;
+    --mcm-result-padding: 40px;
+    --mcm-heading-size: 15px;
+    --mcm-body-size: 12px;
+    --mcm-input-size: 28px;
+    --mcm-result-number-size: 56px;
+    --mcm-btn-size: 13px;
+    --mcm-shadow: 0 8px 40px rgba(0, 0, 0, 0.12);
+    --mcm-ff: 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
+    font-family: var(--mcm-ff);
+    line-height: 1.4;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ==========================================
+   WRAPPER
+   ========================================== */
+.mcm-wrapper {
+    display: flex;
+    border-radius: var(--mcm-border-radius);
+    overflow: hidden;
+    box-shadow: var(--mcm-shadow);
+    max-width: 960px;
+    margin: 30px auto;
+    min-height: 580px;
+}
+
+/* ==========================================
+   LEFT PANEL
+   ========================================== */
+.mcm-form-panel {
+    width: var(--mcm-panel-width);
+    min-width: var(--mcm-panel-width);
+    max-width: var(--mcm-panel-width);
+    background: var(--mcm-panel-color);
+    padding: var(--mcm-panel-padding) 35px 30px;
+    color: var(--mcm-text-light);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.mcm-form-panel form {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.mcm-block {
+    margin-bottom: 28px;
+}
+
+.mcm-block__title {
+    font-size: var(--mcm-heading-size);
+    font-weight: 400;
+    margin-bottom: 16px;
+    color: var(--mcm-text-light);
+    opacity: 0.92;
+    letter-spacing: 0.2px;
+}
+
+.mcm-block__desc {
+    font-size: var(--mcm-body-size);
+    line-height: 1.65;
+    color: var(--mcm-text-light);
+    opacity: 0.68;
+    margin-bottom: 18px;
+}
+
+.mcm-block__desc strong.mcm-activity-label {
+    opacity: 1;
+    color: var(--mcm-text-light);
+}
+
+/* ==========================================
+   FIELD (for date/generic inputs)
+   ========================================== */
+.mcm-field {
+    margin-bottom: 24px;
+}
+
+.mcm-field__label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.4px;
+    margin-bottom: 10px;
+    opacity: 0.9;
+}
+
+/* ==========================================
+   GENDER TOGGLE
+   ========================================== */
+.mcm-gender {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.mcm-gender__btn {
+    flex: 1;
+    background: var(--mcm-inactive-bg);
+    border: none;
+    color: var(--mcm-text-light);
+    padding: 14px 12px;
+    font-family: var(--mcm-ff);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    cursor: pointer;
+    transition: background 0.25s ease, opacity 0.25s ease;
+    opacity: 0.6;
+}
+
+.mcm-gender__btn:hover {
+    opacity: 0.8;
+}
+
+.mcm-gender__btn--active {
+    background: var(--mcm-active-color);
+    opacity: 1;
+}
+
+/* ==========================================
+   INPUT BOXES
+   ========================================== */
+.mcm-inputs {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+
+.mcm-input-box {
+    flex: 1;
+    background: var(--mcm-input-bg);
+    padding: 14px 10px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.mcm-input-box--wide {
+    flex: none;
+    width: 100%;
+}
+
+.mcm-input-box__field {
+    width: 100%;
+    background: transparent;
+    border: none;
+    color: var(--mcm-text-light);
+    font-family: var(--mcm-ff);
+    font-size: var(--mcm-input-size);
+    font-weight: 300;
+    text-align: center;
+    outline: none;
+    padding: 0;
+    line-height: 1.3;
+}
+
+.mcm-input-box__field--date {
+    font-size: 16px;
+    font-weight: 500;
+    padding: 8px 12px;
+    text-align: left;
+    color-scheme: dark;
+}
+
+.mcm-input-box__field::-webkit-outer-spin-button,
+.mcm-input-box__field::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.mcm-input-box__field[type=number] {
+    -moz-appearance: textfield;
+}
+
+.mcm-input-box__unit {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    color: var(--mcm-text-light);
+    opacity: 0.55;
+    margin-top: 4px;
+}
+
+/* ==========================================
+   SLIDER (shared by activity & cycle)
+   ========================================== */
+.mcm-slider-wrap {
+    padding: 0 2px;
+    margin-bottom: 10px;
+}
+
+.mcm-slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.28);
+    outline: none;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.mcm-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    background: var(--mcm-active-color);
+    border-radius: 50%;
+    border: 3px solid var(--mcm-text-light);
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+    transition: transform 0.15s ease;
+}
+
+.mcm-slider::-webkit-slider-thumb:hover {
+    transform: scale(1.15);
+}
+
+.mcm-slider::-moz-range-thumb {
+    width: 18px;
+    height: 18px;
+    background: var(--mcm-active-color);
+    border-radius: 50%;
+    border: 3px solid var(--mcm-text-light);
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+}
+
+.mcm-slider-labels {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+}
+
+.mcm-slider-label {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+    color: var(--mcm-text-light);
+    opacity: 0.4;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.mcm-slider-label--active {
+    opacity: 1;
+}
+
+/* Slider Value Display (for cycle slider) */
+.mcm-slider-value-display {
+    text-align: center;
+    margin-top: 8px;
+}
+
+.mcm-slider-value {
+    font-size: 36px;
+    font-weight: 300;
+    color: var(--mcm-text-light);
+}
+
+.mcm-slider-value-label {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    opacity: 0.6;
+    margin-left: 6px;
+    text-transform: uppercase;
+}
+
+/* ==========================================
+   GOAL BUTTONS
+   ========================================== */
+.mcm-goals {
+    display: flex;
+    gap: 10px;
+}
+
+.mcm-goal {
+    flex: 1;
+    background: var(--mcm-inactive-bg);
+    border: none;
+    color: var(--mcm-text-light);
+    padding: 13px 6px;
+    font-family: var(--mcm-ff);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+    cursor: pointer;
+    transition: background 0.25s ease, opacity 0.25s ease;
+    opacity: 0.6;
+    white-space: nowrap;
+}
+
+.mcm-goal:hover {
+    opacity: 0.85;
+}
+
+.mcm-goal--active {
+    background: var(--mcm-active-color);
+    opacity: 1;
+}
+
+/* ==========================================
+   BOTTOM ACTIONS
+   ========================================== */
+.mcm-bottom {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: auto;
+    padding-top: 28px;
+}
+
+.mcm-clear-btn {
+    background: transparent;
+    border: none;
+    color: var(--mcm-text-light);
+    font-family: var(--mcm-ff);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.2s ease;
+    padding: 0;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.mcm-clear-btn:hover {
+    opacity: 1;
+}
+
+.mcm-calc-btn {
+    flex: 1;
+    background: var(--mcm-active-color);
+    border: none;
+    color: var(--mcm-text-light);
+    font-family: var(--mcm-ff);
+    font-size: var(--mcm-btn-size);
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    padding: 16px 20px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.mcm-calc-btn:hover {
+    background: var(--mcm-active-color);
+    filter: brightness(0.85);
+}
+
+.mcm-calc-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* ==========================================
+   LOADER
+   ========================================== */
+.mcm-loader {
+    position: absolute;
+    inset: 0;
+    background: var(--mcm-panel-color);
+    opacity: 0.92;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+.mcm-loader__spinner {
+    width: 36px;
+    height: 36px;
+    border: 3px solid rgba(255,255,255,0.3);
+    border-top-color: var(--mcm-text-light);
+    border-radius: 50%;
+    animation: mcm-spin 0.7s linear infinite;
+}
+
+@keyframes mcm-spin {
+    to { transform: rotate(360deg); }
+}
+
+/* ==========================================
+   RIGHT PANEL
+   ========================================== */
+.mcm-result-panel {
+    flex: 1;
+    min-width: 0;
+    background: var(--mcm-result-bg);
+    padding: var(--mcm-result-padding) var(--mcm-result-padding) 30px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+/* Custom scrollbar for result panel */
+.mcm-result-panel::-webkit-scrollbar {
+    width: 8px;
+}
+
+.mcm-result-panel::-webkit-scrollbar-track {
+    background: #f5f5f5;
+    border-radius: 4px;
+}
+
+.mcm-result-panel::-webkit-scrollbar-thumb {
+    background: #d0d0d0;
+    border-radius: 4px;
+}
+
+.mcm-result-panel::-webkit-scrollbar-thumb:hover {
+    background: #b0b0b0;
+}
+
+.mcm-result__heading {
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--mcm-text-dark);
+    margin-bottom: 28px;
+    letter-spacing: 0.2px;
+}
+
+/* Placeholder */
+.mcm-placeholder {
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+.mcm-placeholder__inner {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mcm-placeholder__inner p {
+    font-size: 14px;
+    color: var(--mcm-text-gray);
+    text-align: center;
+    max-width: 260px;
+    line-height: 1.7;
+}
+
+/* Result */
+.mcm-result {
+    display: flex;
+    flex-direction: column;
+    animation: mcm-fadeIn 0.45s ease;
+    width: 100%;
+    min-height: fit-content;
+}
+
+@keyframes mcm-fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ==========================================
+   RESULT TOP
+   ========================================== */
+.mcm-result-top {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 32px;
+    align-items: flex-start;
+}
+
+.mcm-result-top__left {
+    flex: 1;
+}
+
+.mcm-kcal {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.mcm-kcal__number {
+    font-size: var(--mcm-result-number-size);
+    font-weight: 700;
+    color: var(--mcm-text-dark);
+    line-height: 1;
+    letter-spacing: -2px;
+}
+
+.mcm-kcal__number--date {
+    font-size: 28px;
+    letter-spacing: -0.5px;
+}
+
+.mcm-kcal__unit {
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--mcm-text-gray);
+}
+
+.mcm-kcal__sub {
+    font-size: 12px;
+    color: var(--mcm-text-gray);
+    line-height: 1.5;
+}
+
+/* Macros / Info rows */
+.mcm-result-top__right {
+    min-width: 180px;
+    padding-top: 6px;
+}
+
+.mcm-macro-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--mcm-gray-light);
+}
+
+.mcm-macro-row:last-child {
+    border-bottom: none;
+}
+
+.mcm-macro-row__label {
+    font-size: 12px;
+    color: var(--mcm-text-gray);
+    font-weight: 400;
+}
+
+.mcm-macro-row__value {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--mcm-text-dark);
+    letter-spacing: -0.3px;
+}
+
+/* ==========================================
+   MEAL TABS (Calories)
+   ========================================== */
+.mcm-tabs {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 32px;
+    flex-wrap: nowrap;
+}
+
+.mcm-tab {
+    flex: 1;
+    background: var(--mcm-gray-bg);
+    border: none;
+    color: var(--mcm-text-gray);
+    font-family: var(--mcm-ff);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    padding: 13px 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    min-width: 0;
+}
+
+.mcm-tab:hover {
+    background: #e4e4e4;
+}
+
+.mcm-tab--active {
+    background: var(--mcm-active-color);
+    color: var(--mcm-text-light);
+}
+
+/* ==========================================
+   PROTEIN SLIDER (Calories)
+   ========================================== */
+.mcm-adjust {
+    margin-bottom: 28px;
+    width: 100%;
+}
+
+.mcm-adjust__title {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--mcm-text-dark);
+    margin-bottom: 6px;
+}
+
+.mcm-adjust__desc {
+    font-size: 12px;
+    color: var(--mcm-text-gray);
+    line-height: 1.65;
+    margin-bottom: 16px;
+    max-width: 100%;
+}
+
+.mcm-protein-slider-wrap {
+    padding: 0 4px;
+    margin-bottom: 8px;
+}
+
+.mcm-protein-slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 2px;
+    background: var(--mcm-gray-light);
+    outline: none;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.mcm-protein-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    background: var(--mcm-active-color);
+    border-radius: 50%;
+    border: 3px solid var(--mcm-result-bg);
+    cursor: pointer;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.22);
+    transition: transform 0.15s ease;
+}
+
+.mcm-protein-slider::-webkit-slider-thumb:hover {
+    transform: scale(1.15);
+}
+
+.mcm-protein-slider::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    background: var(--mcm-active-color);
+    border-radius: 50%;
+    border: 3px solid var(--mcm-result-bg);
+    cursor: pointer;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.22);
+}
+
+.mcm-protein-labels {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.mcm-protein-label {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+    color: var(--mcm-text-gray);
+    opacity: 0.5;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+    flex: 1;
+    text-align: center;
+}
+
+.mcm-protein-label:first-child {
+    text-align: left;
+}
+
+.mcm-protein-label:last-child {
+    text-align: right;
+}
+
+.mcm-protein-label--active {
+    opacity: 1;
+    color: var(--mcm-text-dark);
+}
+
+/* ==========================================
+   FERTILE DAYS (Ovulation)
+   ========================================== */
+.mcm-fertile-days {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+}
+
+.mcm-fertile-day {
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 600;
+    text-align: center;
+    min-width: 80px;
+}
+
+.mcm-fertile-day--high {
+    background: var(--mcm-panel-color);
+    color: var(--mcm-text-light);
+}
+
+.mcm-fertile-day--medium {
+    background: var(--mcm-panel-color-light, rgba(244, 123, 74, 0.3));
+    color: var(--mcm-text-dark);
+}
+
+.mcm-fertile-day--low {
+    background: var(--mcm-gray-bg);
+    color: var(--mcm-text-gray);
+}
+
+.mcm-fertile-day--ovulation {
+    background: var(--mcm-active-color);
+    color: var(--mcm-text-light);
+    position: relative;
+}
+
+/* Fertility Status */
+.mcm-status {
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 24px;
+    background: var(--mcm-gray-bg);
+    color: var(--mcm-text-dark);
+}
+
+/* ==========================================
+   PROGRESS BAR (Pregnancy)
+   ========================================== */
+.mcm-progress-wrap {
+    margin-bottom: 28px;
+}
+
+.mcm-progress-bar {
+    width: 100%;
+    height: 8px;
+    background: var(--mcm-gray-light);
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 8px;
+}
+
+.mcm-progress-bar__fill {
+    height: 100%;
+    background: var(--mcm-panel-color);
+    border-radius: 4px;
+    transition: width 0.8s ease;
+}
+
+.mcm-progress-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px;
+    color: var(--mcm-text-gray);
+    font-weight: 500;
+}
+
+/* Extra Info (Pregnancy) */
+.mcm-extra-info {
+    margin-bottom: 24px;
+    padding: 16px;
+    background: var(--mcm-gray-bg);
+    border-radius: 8px;
+}
+
+/* ==========================================
+   DISCLAIMER
+   ========================================== */
+.mcm-disclaimer {
+    font-size: 11px;
+    line-height: 1.7;
+    color: var(--mcm-text-gray);
+    margin-top: 32px;
+    padding-top: 20px;
+    border-top: 1px solid var(--mcm-gray-light);
+}
+
+/* ==========================================
+   RESPONSIVE
+   ========================================== */
+@media (max-width: 900px) {
+    .mcm-wrapper {
+        max-width: 100%;
+        margin: 0;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .mcm-form-panel {
+        width: 340px;
+        min-width: 340px;
+        padding: 30px 25px;
+    }
+
+    .mcm-result-panel {
+        padding: 30px 25px;
+    }
+
+    .mcm-result-top {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .mcm-result-top__right {
+        min-width: 0;
+    }
+}
+
+@media (max-width: 700px) {
+    .mcm-wrapper {
+        flex-direction: column;
+        min-height: auto;
+    }
+
+    .mcm-form-panel {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .mcm-kcal__number {
+        font-size: 44px;
+    }
+
+    .mcm-goals {
+        flex-wrap: wrap;
+    }
+
+    .mcm-goal {
+        flex: 1 1 40%;
+    }
+
+    .mcm-tabs {
+        flex-wrap: wrap;
+    }
+
+    .mcm-tab {
+        flex: 1 1 40%;
+    }
+}
+
+@media (max-width: 420px) {
+    .mcm-form-panel {
+        padding: 24px 18px 20px;
+    }
+
+    .mcm-result-panel {
+        padding: 24px 18px 20px;
+    }
+
+    .mcm-input-box__field {
+        font-size: 22px;
+    }
+
+    .mcm-kcal__number {
+        font-size: 38px;
+    }
+}
+
+/* ==========================================
+   RTL SUPPORT
+   ========================================== */
+[dir="rtl"] .mcm-wrapper {
+    flex-direction: row-reverse;
+}
+
+[dir="rtl"] .mcm-kcal {
+    flex-direction: row-reverse;
+}
+
+[dir="rtl"] .mcm-macro-row {
+    flex-direction: row-reverse;
+}
+
+@media (max-width: 700px) {
+    [dir="rtl"] .mcm-wrapper {
+        flex-direction: column;
+    }
+}
+
+/* ==========================================
+   PRINT
+   ========================================== */
+@media print {
+    .mcm-form-panel { display: none; }
+    .mcm-wrapper { box-shadow: none; }
+    .mcm-result-panel { width: 100%; }
+    .mcm-placeholder { display: none; }
+}

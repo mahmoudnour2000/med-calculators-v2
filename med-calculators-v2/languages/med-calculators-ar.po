@@ -1,0 +1,267 @@
+# Arabic translation for Med Calculators
+# Copyright (C) 2026
+# This file is distributed under the same license as the Med Calculators plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: Med Calculators 1.0.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-09 10:00:00+0000\n"
+"PO-Revision-Date: 2026-02-09 10:00:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: Arabic\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);\n"
+
+# General
+msgid "Calculating..."
+msgstr "جاري الحساب..."
+
+msgid "An error occurred. Please try again."
+msgstr "حدث خطأ. يرجى المحاولة مرة أخرى."
+
+msgid "Please fill in all required fields."
+msgstr "يرجى ملء جميع الحقول المطلوبة."
+
+msgid "Calculation error"
+msgstr "خطأ في الحساب"
+
+msgid "Network error. Please try again."
+msgstr "خطأ في الشبكة. يرجى المحاولة مرة أخرى."
+
+# Calories Calculator
+msgid "Body Parameters"
+msgstr "معلومات الجسم"
+
+msgid "MALE"
+msgstr "ذكر"
+
+msgid "FEMALE"
+msgstr "أنثى"
+
+msgid "KG"
+msgstr "كجم"
+
+msgid "CM"
+msgstr "سم"
+
+msgid "Activity Level"
+msgstr "مستوى النشاط"
+
+msgid "Low"
+msgstr "منخفض"
+
+msgid "Little or no exercise. Desk job with minimal movement."
+msgstr "قليل من التمارين أو بدون تمارين. عمل مكتبي مع حركة قليلة."
+
+msgid "Middle"
+msgstr "متوسط"
+
+msgid "Activity that burns an additional 400-650 calories for females or 500-800 calories for males."
+msgstr "نشاط يحرق 400-650 سعرة حرارية إضافية للإناث أو 500-800 سعرة حرارية للذكور."
+
+msgid "High"
+msgstr "عالي"
+
+msgid "Intense exercise 6-7 days/week. Very physically demanding lifestyle."
+msgstr "تمارين مكثفة 6-7 أيام في الأسبوع. نمط حياة يتطلب مجهوداً بدنياً كبيراً."
+
+msgid "Very High"
+msgstr "عالي جداً"
+
+msgid "Extremely active. Athlete-level training twice per day."
+msgstr "نشط للغاية. تدريب رياضي مرتين يومياً."
+
+msgid "LOW"
+msgstr "منخفض"
+
+msgid "MIDDLE"
+msgstr "متوسط"
+
+msgid "HIGH"
+msgstr "عالي"
+
+msgid "VERY HIGH"
+msgstr "عالي جداً"
+
+msgid "Goals"
+msgstr "الأهداف"
+
+msgid "LOSE"
+msgstr "خسارة"
+
+msgid "LOSE 10%"
+msgstr "خسارة 10%"
+
+msgid "MAINTAIN"
+msgstr "الحفاظ"
+
+msgid "GAIN"
+msgstr "زيادة"
+
+msgid "CLEAR"
+msgstr "مسح"
+
+msgid "CALCULATE"
+msgstr "احسب"
+
+msgid "Your Result"
+msgstr "نتيجتك"
+
+msgid "Fill in the form and press Calculate to see your results."
+msgstr "املأ النموذج واضغط احسب لرؤية نتائجك."
+
+msgid "kcal"
+msgstr "سعرة"
+
+msgid "Suggested amount of calories per day."
+msgstr "الكمية المقترحة من السعرات الحرارية يومياً."
+
+msgid "Carbohydrate"
+msgstr "كربوهيدرات"
+
+msgid "Protein"
+msgstr "بروتين"
+
+msgid "Fat"
+msgstr "دهون"
+
+msgid "PER DAY"
+msgstr "في اليوم"
+
+msgid "%d MEALS"
+msgstr "%d وجبات"
+
+msgid "Adjust Protein"
+msgstr "ضبط البروتين"
+
+msgid "We recommend to start with normal level. If you do a lot of lifting, try \"high\"."
+msgstr "نوصي بالبدء بالمستوى العادي. إذا كنت تمارس رفع الأثقال كثيراً، جرب \"عالي\"."
+
+msgid "NORMAL"
+msgstr "عادي"
+
+msgid "g"
+msgstr "جم"
+
+msgid "g/meal"
+msgstr "جم/وجبة"
+
+# Pregnancy Calculator
+msgid "Pregnancy Information"
+msgstr "معلومات الحمل"
+
+msgid "First Day of Last Menstrual Period"
+msgstr "أول يوم من آخر دورة شهرية"
+
+msgid "Enter the first day of your last menstrual period to calculate your expected due date using Naegele's rule."
+msgstr "أدخل أول يوم من آخر دورة شهرية لحساب تاريخ الولادة المتوقع باستخدام قاعدة نيجيل."
+
+msgid "Enter the date of your last menstrual period and press Calculate."
+msgstr "أدخل تاريخ آخر دورة شهرية واضغط احسب."
+
+msgid "Expected Due Date"
+msgstr "تاريخ الولادة المتوقع"
+
+msgid "Current Week"
+msgstr "الأسبوع الحالي"
+
+msgid "Trimester"
+msgstr "الثلث"
+
+msgid "Days Remaining"
+msgstr "الأيام المتبقية"
+
+msgid "Week %d"
+msgstr "الأسبوع %d"
+
+msgid "Estimated Conception Date"
+msgstr "تاريخ الحمل المقدر"
+
+msgid "Weeks Remaining"
+msgstr "الأسابيع المتبقية"
+
+msgid "Week"
+msgstr "أسبوع"
+
+msgid "days"
+msgstr "أيام"
+
+msgid "weeks"
+msgstr "أسابيع"
+
+msgid "1st Trimester"
+msgstr "الثلث الأول"
+
+msgid "2nd Trimester"
+msgstr "الثلث الثاني"
+
+msgid "3rd Trimester"
+msgstr "الثلث الثالث"
+
+# Ovulation Calculator
+msgid "Cycle Information"
+msgstr "معلومات الدورة"
+
+msgid "First Day of Last Period"
+msgstr "أول يوم من آخر دورة"
+
+msgid "Average Cycle Length"
+msgstr "متوسط طول الدورة"
+
+msgid "The average menstrual cycle is 28 days, but it can range from 21 to 35 days."
+msgstr "متوسط الدورة الشهرية 28 يوماً، لكن يمكن أن يتراوح من 21 إلى 35 يوماً."
+
+msgid "days"
+msgstr "أيام"
+
+msgid "Enter your cycle information and press Calculate to see your fertility window."
+msgstr "أدخل معلومات دورتك واضغط احسب لمعرفة فترة الخصوبة."
+
+msgid "Estimated Ovulation Date"
+msgstr "تاريخ التبويض المقدر"
+
+msgid "Fertile Window"
+msgstr "فترة الخصوبة"
+
+msgid "Peak Fertility"
+msgstr "ذروة الخصوبة"
+
+msgid "Next Period"
+msgstr "الدورة القادمة"
+
+msgid "Fertile window begins in %d day."
+msgid_plural "Fertile window begins in %d days."
+msgstr[0] "تبدأ فترة الخصوبة اليوم."
+msgstr[1] "تبدأ فترة الخصوبة غداً."
+msgstr[2] "تبدأ فترة الخصوبة بعد يومين."
+msgstr[3] "تبدأ فترة الخصوبة بعد %d أيام."
+msgstr[4] "تبدأ فترة الخصوبة بعد %d يوماً."
+msgstr[5] "تبدأ فترة الخصوبة بعد %d يوم."
+
+msgid "Today is your estimated ovulation day!"
+msgstr "اليوم هو يوم التبويض المقدر!"
+
+msgid "You are currently in your fertile window."
+msgstr "أنت حالياً في فترة الخصوبة."
+
+msgid "Your fertile window has passed for this cycle."
+msgstr "انتهت فترة الخصوبة لهذه الدورة."
+
+# Common
+msgid "This calculator is for informational purposes only and should not replace professional medical advice."
+msgstr "هذه الحاسبة للأغراض الإعلامية فقط ولا ينبغي أن تحل محل المشورة الطبية المهنية."
+
+msgid "Your Result"
+msgstr "نتيجتك"
+
+msgid "Fill in the form and press Calculate to see your results."
+msgstr "املأ النموذج واضغط احسب لرؤية نتائجك."
+
+msgid "Suggested amount of calories per day."
+msgstr "الكمية المقترحة من السعرات الحرارية يومياً."
+
+msgid "We recommend to start with normal level. If you do a lot of lifting, try \"high\"."
+msgstr "نوصي بالبدء بالمستوى العادي. إذا كنت تمارس رفع الأثقال كثيراً، جرب \"عالي\"."

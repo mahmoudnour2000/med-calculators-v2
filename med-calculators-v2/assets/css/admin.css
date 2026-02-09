@@ -1,0 +1,1243 @@
+/**
+ * Med Calculators - Admin Styles (WordPress Standard)
+ *
+ * @package MedCalculators
+ */
+
+/* Minimal custom styles - using WordPress defaults */
+
+/* ========================================
+   Page Title Icons
+   ======================================== */
+.wrap h1 .dashicons {
+    color: #0073aa;
+}
+
+/* ========================================
+   Advanced Settings - Tabs
+   ======================================== */
+.nav-tab-wrapper .nav-tab .dashicons {
+    font-size: 16px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.nav-tab-wrapper {
+    margin-bottom: 0;
+    border-bottom: 1px solid #c3c4c7;
+}
+
+/* Tab content styling */
+.wrap form {
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #c3c4c7;
+    border-top: none;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.04);
+}
+
+.wrap form h2:first-child {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.wrap form .form-table {
+    margin-top: 15px;
+}
+
+/* Number inputs styling */
+.form-table input[type="number"].small-text {
+    width: 80px;
+}
+
+/* Color picker styling */
+.form-table input[type="color"] {
+    width: 60px;
+    height: 40px;
+    padding: 3px;
+    border: 1px solid #8c8f94;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.form-table input[type="color"]:hover {
+    border-color: #2271b1;
+}
+
+/* Section headers */
+.wrap form > h2 {
+    font-size: 18px;
+    margin: 20px 0 10px;
+    padding: 10px 0;
+    border-bottom: 1px solid #dcdcde;
+}
+
+/* ========================================
+   Stats Cards - WordPress Metabox Style
+   ======================================== */
+.med-calc-stats-row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.med-calc-stat-card {
+    flex: 1;
+    min-width: 250px;
+}
+
+.med-calc-stat-card .inside {
+    margin: 0;
+    padding: 12px;
+}
+
+.med-calc-stat-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+
+.med-calc-stat-icon {
+    font-size: 24px;
+    line-height: 1;
+}
+
+.med-calc-stat-title {
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.med-calc-stat-status {
+    display: inline-block;
+    padding: 2px 8px;
+    font-size: 11px;
+    border-radius: 3px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.med-calc-stat-status.active {
+    background: #d4edda;
+    color: #155724;
+}
+
+.med-calc-stat-status.inactive {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+.med-calc-stat-shortcode {
+    font-size: 12px;
+    padding: 6px;
+    background: #f0f0f1;
+    border: 1px dashed #c3c4c7;
+    border-radius: 2px;
+    display: block;
+    margin-top: 8px;
+}
+
+/* ========================================
+   Shortcode Copy Button
+   ======================================== */
+.med-calc-shortcode-actions {
+    margin-top: 8px;
+}
+
+.med-calc-copy-shortcode {
+    font-size: 11px;
+    height: auto;
+    line-height: 1;
+    padding: 3px 8px;
+}
+
+.med-calc-copy-shortcode .dashicons {
+    font-size: 14px;
+    line-height: 1;
+    vertical-align: middle;
+    margin-right: 3px;
+}
+
+/* ========================================
+   Guide Page - WordPress Notice Style
+   ======================================== */
+.med-calc-guide-section {
+    margin-bottom: 15px;
+}
+
+.med-calc-guide-icon {
+    font-size: 20px;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+.med-calc-guide-code {
+    display: inline-block;
+    padding: 3px 5px;
+    margin: 2px;
+    font-size: 13px;
+    line-height: 1.4;
+    color: #555;
+    background-color: #f9f9f9;
+    border: 1px solid #d4d4d4;
+    border-radius: 3px;
+    font-family: Consolas, Monaco, monospace;
+}
+
+/* ========================================
+   Live Preview Page - WordPress Standard Layout
+   ======================================== */
+.med-calc-preview-layout {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+    align-items: flex-start;
+}
+
+.med-calc-preview-controls {
+    width: 300px;
+    flex-shrink: 0;
+}
+
+.med-calc-preview-controls .postbox {
+    margin-bottom: 15px;
+    margin-right: 0;
+}
+
+.med-calc-preview-controls .postbox:last-child {
+    margin-bottom: 0;
+}
+
+.med-calc-preview-panel {
+    flex: 1;
+    min-width: 0;
+}
+
+.med-calc-preview-panel .postbox {
+    border: 1px solid #c3c4c7;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+    background: #fff;
+}
+
+.med-calc-preview-panel .postbox .hndle {
+    background: #fff;
+    border-bottom: 1px solid #c3c4c7;
+    padding: 12px;
+    margin: 0;
+}
+
+.med-calc-preview-panel .postbox .inside {
+    padding: 0;
+    background: #fff;
+}
+
+.med-calc-preview-container {
+    background: #f0f0f1;
+    padding: 30px;
+    min-height: 700px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    overflow: auto;
+}
+
+.med-calc-preview-frame {
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+    transition: all 0.3s ease;
+}
+
+/* Apply CSS Variables to Preview Cards - Force Application */
+.med-calc-preview-frame {
+    font-family: var(--med-font-family, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+}
+
+.med-calc-preview-frame .med-calc-card {
+    font-family: var(--med-font-family, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif) !important;
+    background: var(--med-background, #ffffff) !important;
+    border-radius: var(--med-card-radius, 24px) !important;
+    padding: var(--med-card-padding, 32px) !important;
+    border: var(--med-card-border-width, 1px) solid var(--med-border, #e5e7eb) !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+}
+
+.med-calc-preview-frame .med-calc-card::before {
+    background: linear-gradient(90deg, var(--med-primary, #0d9488), var(--med-primary, #0d9488)) !important;
+}
+
+.med-calc-preview-frame .med-calc-title {
+    color: var(--med-text, #1f2937) !important;
+    font-size: var(--med-heading-size, 24px) !important;
+    font-weight: var(--med-heading-weight, 600) !important;
+    font-family: var(--med-font-family, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif) !important;
+}
+
+.med-calc-preview-frame .med-calc-subtitle {
+    color: var(--med-secondary, #6b7280) !important;
+    font-size: var(--med-body-size, 16px) !important;
+    font-family: var(--med-font-family, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif) !important;
+}
+
+.med-calc-preview-frame .med-label {
+    color: var(--med-text, #1f2937) !important;
+    font-size: var(--med-label-size, 14px) !important;
+    font-family: var(--med-font-family, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif) !important;
+}
+
+.med-calc-preview-frame .med-input {
+    font-size: var(--med-body-size, 16px) !important;
+    border-width: var(--med-input-border-width, 1px) !important;
+    border-style: var(--med-input-border-style, solid) !important;
+    border-color: var(--med-border, #e5e7eb) !important;
+    border-radius: var(--med-input-radius, 8px) !important;
+    padding: var(--med-input-padding, 12px) var(--med-space-4) !important;
+    font-family: var(--med-font-family, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif) !important;
+}
+
+.med-calc-preview-frame .med-input:focus {
+    border-color: var(--med-primary, #0d9488) !important;
+    box-shadow: 0 0 0 3px rgba(13, 148, 136, 0.1) !important;
+}
+
+.med-calc-preview-frame .med-calc-form {
+    gap: var(--med-form-spacing, 24px) !important;
+}
+
+.med-calc-preview-frame .med-btn-primary {
+    font-size: var(--med-button-font-size, 16px) !important;
+    border-radius: var(--med-button-radius, 8px) !important;
+    text-transform: var(--med-button-transform, none) !important;
+    padding: var(--med-button-padding-v, 12px) var(--med-button-padding-h, 32px) !important;
+    background: linear-gradient(135deg, var(--med-primary, #0d9488), var(--med-primary-dark, #0f766e)) !important;
+    font-family: var(--med-font-family, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif) !important;
+}
+
+.med-calc-preview-frame .med-radio:has(input:checked) {
+    border-color: var(--med-primary, #0d9488) !important;
+    background: rgba(13, 148, 136, 0.1) !important;
+}
+
+.med-calc-preview-frame .med-radio-mark::after {
+    background: var(--med-primary, #0d9488) !important;
+}
+
+/* Animation Speed - Apply to all transitions */
+.med-calc-preview-frame * {
+    transition-duration: var(--med-animation-speed, 0.4s) !important;
+}
+
+.med-calc-preview-frame .med-input,
+.med-calc-preview-frame .med-btn,
+.med-calc-preview-frame .med-radio {
+    transition-duration: var(--med-animation-speed, 0.4s) !important;
+}
+
+/* Enable/Disable Animations */
+.med-calc-preview-frame .med-calc-card:not(.animations-enabled) *,
+.med-calc-preview-frame .med-calc-card:not(.animations-enabled) {
+    transition-duration: 0s !important;
+    animation: none !important;
+}
+
+.med-calc-preview-frame .med-calc-card.animations-enabled * {
+    transition-duration: var(--med-animation-speed, 0.4s) !important;
+}
+
+/* Hover Effects */
+.med-calc-preview-frame .med-calc-card.hover-effects-enabled:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.med-calc-preview-frame .med-btn.hover-effects-enabled:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Result Animation Classes */
+.med-calc-preview-frame .med-result {
+    animation-duration: var(--med-animation-speed, 0.4s) !important;
+}
+
+.med-calc-preview-frame .med-result.animation-fade {
+    animation: med-fade-in var(--med-animation-speed, 0.4s) ease-out !important;
+}
+
+.med-calc-preview-frame .med-result.animation-slide {
+    animation: med-slide-up var(--med-animation-speed, 0.4s) ease-out !important;
+}
+
+.med-calc-preview-frame .med-result.animation-zoom {
+    animation: med-zoom-in var(--med-animation-speed, 0.4s) ease-out !important;
+}
+
+.med-calc-preview-frame .med-result.animation-bounce {
+    animation: med-bounce-in var(--med-animation-speed, 0.4s) ease-out !important;
+}
+
+/* Animation Keyframes */
+@keyframes med-fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes med-slide-up {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes med-zoom-in {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes med-bounce-in {
+    0% {
+        opacity: 0;
+        transform: scale(0.3);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+    70% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Card Style Variations */
+.med-calc-preview-frame .med-calc-card.style-default {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+}
+
+.med-calc-preview-frame .med-calc-card.style-bordered {
+    box-shadow: none !important;
+    border-width: var(--med-card-border-width, 2px) !important;
+}
+
+.med-calc-preview-frame .med-calc-card.style-flat {
+    box-shadow: none !important;
+    border: none !important;
+}
+
+.med-calc-preview-frame .med-calc-card.style-elevated {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15) !important;
+}
+
+.med-calc-preview-frame.desktop-view {
+    max-width: 100%;
+}
+
+.med-calc-preview-frame.tablet-view {
+    max-width: 768px;
+}
+
+.med-calc-preview-frame.mobile-view {
+    max-width: 375px;
+}
+
+.med-calc-preview-item {
+    display: block;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Preview tabs - Enhanced */
+.med-calc-preview-tabs {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.med-calc-preview-tab {
+    width: 100%;
+    text-align: left;
+    padding: 12px 14px;
+    border: 2px solid #dcdcde;
+    background: #fff;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.med-calc-preview-tab:hover {
+    border-color: #a7aaad;
+    background: #f9f9f9;
+}
+
+.med-calc-preview-tab.active {
+    background: #f0f6fc;
+    font-weight: 600;
+    border-color: #2271b1;
+    color: #2271b1;
+    box-shadow: 0 0 0 1px #2271b1;
+}
+
+.med-calc-preview-tab-icon {
+    margin-right: 8px;
+    font-size: 18px;
+    vertical-align: middle;
+}
+
+/* Device toggle - Enhanced */
+.med-calc-device-toggle {
+    display: flex;
+    gap: 8px;
+}
+
+.med-calc-device-btn {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+    border: 2px solid #dcdcde;
+    background: #fff;
+    border-radius: 4px;
+    transition: all 0.2s;
+}
+
+.med-calc-device-btn:hover {
+    border-color: #8c8f94;
+    background: #f9f9f9;
+}
+
+.med-calc-device-btn .dashicons {
+    font-size: 20px;
+    line-height: 1;
+}
+
+.med-calc-device-btn.active {
+    background: #2271b1;
+    border-color: #2271b1;
+    color: #fff;
+    box-shadow: 0 2px 4px rgba(34, 113, 177, 0.3);
+}
+
+.med-calc-device-btn.active:hover {
+    background: #135e96;
+    border-color: #135e96;
+}
+
+/* ========================================
+   Preview Controls Wrapper & Scroll
+   ======================================== */
+.med-calc-preview-controls-wrapper {
+    width: 320px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    max-height: calc(100vh - 180px);
+}
+
+.med-calc-preview-controls {
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-right: 10px;
+}
+
+.med-calc-preview-controls::-webkit-scrollbar {
+    width: 10px;
+}
+
+.med-calc-preview-controls::-webkit-scrollbar-track {
+    background: #f6f7f7;
+    border-radius: 5px;
+    border: 1px solid #e8e8e8;
+}
+
+.med-calc-preview-controls::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #b4b9be 0%, #8c8f94 100%);
+    border-radius: 5px;
+    border: 2px solid #f6f7f7;
+}
+
+.med-calc-preview-controls::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #8c8f94 0%, #646970 100%);
+}
+
+.med-calc-preview-controls::-webkit-scrollbar-thumb:active {
+    background: #2271b1;
+}
+
+/* ========================================
+   Collapsible Postboxes - WordPress Standard
+   ======================================== */
+.med-calc-preview-controls .postbox {
+    border: 1px solid #c3c4c7;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+    background: #fff;
+    margin-bottom: 20px;
+}
+
+.med-calc-preview-controls .postbox:last-of-type {
+    margin-bottom: 0;
+}
+
+.postbox .handlediv {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    float: right;
+    height: 36px;
+    padding: 0;
+    width: 36px;
+    transition: all 0.2s;
+}
+
+.postbox .handlediv:hover {
+    background: rgba(0, 0, 0, 0.03);
+    border-radius: 3px;
+}
+
+.postbox .handlediv:before {
+    content: '\f142';
+    font: normal 18px/1 dashicons;
+    speak: never;
+    display: inline-block;
+    padding: 9px 10px;
+    top: 0;
+    position: relative;
+    color: #646970;
+}
+
+.postbox.closed .handlediv:before {
+    content: '\f140';
+}
+
+.postbox.closed .inside {
+    display: none;
+}
+
+.postbox .hndle {
+    cursor: pointer;
+    user-select: none;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 12px 12px;
+    border-bottom: 1px solid #c3c4c7;
+    background: #fff;
+    margin: 0;
+}
+
+.postbox.closed .hndle {
+    border-bottom: none;
+}
+
+.postbox .hndle .dashicons {
+    margin-right: 6px;
+    color: #2271b1;
+    font-size: 18px;
+    vertical-align: middle;
+}
+
+.postbox .inside {
+    padding: 12px;
+    background: #fff;
+}
+
+/* ========================================
+   Preview Control Elements - Enhanced
+   ======================================== */
+.med-calc-preview-control {
+    margin-bottom: 18px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid #f0f0f1;
+}
+
+.med-calc-preview-control:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.med-calc-preview-control label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 12px;
+    color: #50575e;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.med-calc-preview-control input[type="color"] {
+    width: 50px;
+    height: 50px;
+    border: 3px solid #dcdcde;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.med-calc-preview-control input[type="color"]:hover {
+    border-color: #2271b1;
+    transform: scale(1.05);
+}
+
+.med-calc-preview-control input[type="range"] {
+    width: 100%;
+    height: 6px;
+    border-radius: 3px;
+    background: #dcdcde;
+    outline: none;
+    -webkit-appearance: none;
+    transition: all 0.2s;
+    position: relative;
+}
+
+.med-calc-preview-control input[type="range"]:hover {
+    background: #c3c4c7;
+}
+
+/* Progress track for range slider */
+.med-calc-preview-control input[type="range"]::-webkit-slider-runnable-track {
+    height: 6px;
+    border-radius: 3px;
+    background: #dcdcde;
+}
+
+.med-calc-preview-control input[type="range"]::-moz-range-track {
+    height: 6px;
+    border-radius: 3px;
+    background: #dcdcde;
+}
+
+.med-calc-preview-control input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #fff;
+    border: 3px solid #2271b1;
+    cursor: pointer;
+    transition: all 0.2s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.med-calc-preview-control input[type="range"]::-webkit-slider-thumb:hover {
+    transform: scale(1.15);
+    box-shadow: 0 0 0 6px rgba(34, 113, 177, 0.15), 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.med-calc-preview-control input[type="range"]::-webkit-slider-thumb:active {
+    transform: scale(1.25);
+}
+
+.med-calc-preview-control input[type="range"]::-moz-range-thumb {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #fff;
+    border: 3px solid #2271b1;
+    cursor: pointer;
+    transition: all 0.2s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.med-calc-preview-control input[type="range"]::-moz-range-thumb:hover {
+    transform: scale(1.15);
+    box-shadow: 0 0 0 6px rgba(34, 113, 177, 0.15), 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.med-calc-preview-control input[type="range"]::-moz-range-thumb:active {
+    transform: scale(1.25);
+}
+
+.med-calc-preview-control select {
+    width: 100%;
+    padding: 8px 12px;
+    border: 2px solid #dcdcde;
+    border-radius: 4px;
+    font-size: 13px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-weight: 500;
+}
+
+.med-calc-preview-control select:hover {
+    border-color: #8c8f94;
+}
+
+.med-calc-preview-control select:focus {
+    border-color: #2271b1;
+    outline: none;
+    box-shadow: 0 0 0 1px #2271b1;
+    background-color: #f9f9f9;
+}
+
+.med-calc-preview-control .color-value {
+    font-family: 'Courier New', monospace;
+    font-size: 13px;
+    font-weight: 600;
+    color: #2c3338;
+    background: #f0f0f1;
+    padding: 4px 8px;
+    border-radius: 3px;
+}
+
+.med-calc-preview-control .range-value {
+    font-family: 'Courier New', monospace;
+    font-size: 13px;
+    font-weight: 600;
+    color: #2271b1;
+    background: #f0f6fc;
+    padding: 4px 10px;
+    border-radius: 3px;
+    display: inline-block;
+    margin-top: 6px;
+    min-width: 50px;
+    text-align: center;
+}
+
+/* ========================================
+   Preview Actions Bar (Fixed at Bottom) - WordPress Standard
+   ======================================== */
+.med-calc-preview-actions-bar {
+    flex-shrink: 0;
+    background: #fff;
+    padding: 12px;
+    border-top: 1px solid #c3c4c7;
+    box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.04);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: auto;
+}
+
+.med-calc-preview-actions-bar .button {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+
+.med-calc-preview-actions-bar .button-hero {
+    font-size: 13px;
+    height: auto;
+    line-height: 2.15384615;
+    padding: 0 12px;
+    min-height: 30px;
+}
+
+/* ========================================
+   Button Animations
+   ======================================== */
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(359deg);
+    }
+}
+
+#preview-save-btn .dashicons,
+#preview-reset-btn .dashicons {
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+#preview-save-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+/* ========================================
+   Analytics Dashboard
+   ======================================== */
+.med-calc-analytics-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.med-calc-analytics-card {
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    transition: all 0.2s ease;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.med-calc-analytics-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.med-calc-analytics-card__icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.med-calc-analytics-card__icon .dashicons {
+    font-size: 28px;
+    width: 28px;
+    height: 28px;
+    color: #fff;
+}
+
+.med-calc-analytics-card--primary .med-calc-analytics-card__icon {
+    background: linear-gradient(135deg, #0d9488, #14b8a6);
+}
+
+.med-calc-analytics-card--success .med-calc-analytics-card__icon {
+    background: linear-gradient(135deg, #059669, #10b981);
+}
+
+.med-calc-analytics-card--info .med-calc-analytics-card__icon {
+    background: linear-gradient(135deg, #2563eb, #3b82f6);
+}
+
+.med-calc-analytics-card--warning .med-calc-analytics-card__icon {
+    background: linear-gradient(135deg, #d97706, #f59e0b);
+}
+
+.med-calc-analytics-card__content {
+    display: flex;
+    flex-direction: column;
+}
+
+.med-calc-analytics-card__number {
+    font-size: 32px;
+    font-weight: 700;
+    color: #1f2937;
+    line-height: 1;
+}
+
+.med-calc-analytics-card__label {
+    font-size: 13px;
+    color: #6b7280;
+    margin-top: 4px;
+}
+
+/* Analytics Row */
+.med-calc-analytics-row {
+    display: flex;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.med-calc-analytics-chart {
+    flex: 2;
+}
+
+.med-calc-analytics-breakdown {
+    flex: 1;
+    min-width: 300px;
+}
+
+.med-calc-analytics-chart .hndle,
+.med-calc-analytics-breakdown .hndle {
+    cursor: default;
+    padding: 10px 12px;
+}
+
+.med-calc-analytics-chart .hndle .dashicons,
+.med-calc-analytics-breakdown .hndle .dashicons {
+    margin-right: 6px;
+    color: #0d9488;
+}
+
+.med-calc-analytics-chart canvas {
+    width: 100% !important;
+    display: block;
+}
+
+/* Type breakdown */
+.med-calc-analytics-type-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.med-calc-analytics-type-item {
+    padding: 12px;
+    background: #f9fafb;
+    border-radius: 8px;
+}
+
+.med-calc-analytics-type-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.med-calc-analytics-type-icon {
+    font-size: 20px;
+}
+
+.med-calc-analytics-type-name {
+    font-weight: 600;
+    color: #374151;
+    flex: 1;
+}
+
+.med-calc-analytics-type-count {
+    font-weight: 700;
+    color: #1f2937;
+    font-size: 18px;
+}
+
+.med-calc-analytics-type-bar {
+    width: 100%;
+    height: 8px;
+    background: #e5e7eb;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.med-calc-analytics-type-bar-fill {
+    height: 100%;
+    border-radius: 4px;
+    transition: width 0.6s ease;
+}
+
+.med-calc-analytics-type-percentage {
+    font-size: 12px;
+    color: #9ca3af;
+    margin-top: 4px;
+    display: block;
+}
+
+/* Empty state */
+.med-calc-analytics-empty {
+    text-align: center;
+    padding: 40px 20px;
+    color: #9ca3af;
+}
+
+.med-calc-analytics-empty .dashicons {
+    font-size: 48px;
+    width: 48px;
+    height: 48px;
+    color: #d1d5db;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+.med-calc-analytics-empty p {
+    font-size: 14px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+/* ========================================
+   Leads & Logs Page
+   ======================================== */
+.med-calc-leads-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+    padding: 16px;
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+}
+
+.med-calc-leads-filters form {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.med-calc-leads-filters select {
+    min-width: 180px;
+}
+
+.med-calc-leads-export .dashicons {
+    font-size: 16px;
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+}
+
+.med-calc-result-preview {
+    font-size: 12px;
+    color: #6b7280;
+    max-width: 200px;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* ========================================
+   Responsive
+   ======================================== */
+@media (max-width: 782px) {
+    .med-calc-preview-layout {
+        flex-direction: column;
+    }
+
+    .med-calc-preview-controls-wrapper {
+        width: 100%;
+        max-height: none;
+    }
+
+    .med-calc-preview-controls {
+        max-height: 500px;
+    }
+
+    .med-calc-preview-actions-bar {
+        margin-top: 15px;
+    }
+
+    .med-calc-stats-row {
+        flex-direction: column;
+    }
+
+    .med-calc-stat-card {
+        width: 100%;
+    }
+
+    .med-calc-analytics-row {
+        flex-direction: column;
+    }
+
+    .med-calc-analytics-breakdown {
+        min-width: auto;
+    }
+
+    .med-calc-leads-actions {
+        flex-direction: column;
+        gap: 12px;
+    }
+}
+
+/* ==========================================
+   Preview Hover & Active Effects
+   ======================================== */
+.med-calc-preview-frame .mcm-calc-btn {
+    transition: all 0.3s ease;
+}
+
+.med-calc-preview-frame .mcm-gender__btn,
+.med-calc-preview-frame .mcm-goal,
+.med-calc-preview-frame .mcm-tab {
+    transition: all 0.25s ease;
+}
+
+.med-calc-preview-frame .mcm-gender__btn--active,
+.med-calc-preview-frame .mcm-goal--active,
+.med-calc-preview-frame .mcm-tab--active {
+    transform: scale(1);
+}
+
+/* Fix for result panel visibility in preview */
+.med-calc-preview-frame .mcm-result-panel {
+    min-height: 100%;
+    max-height: none;
+}
+
+.med-calc-preview-frame .mcm-wrapper {
+    min-height: auto;
+}
+
+.med-calc-preview-frame .mcm-result {
+    display: none !important;
+}
+
+.med-calc-preview-frame .mcm-result[style*="display: flex"],
+.med-calc-preview-frame .mcm-result[style*="display:flex"] {
+    display: flex !important;
+}
+
+.med-calc-preview-frame .mcm-placeholder {
+    min-height: 500px;
+}
+
+/* Ensure full content visibility in preview */
+.med-calc-preview-frame .mcm {
+    width: 100%;
+    height: auto;
+}
+
+.med-calc-preview-frame .mcm-wrapper {
+    margin: 0 auto;
+    height: auto;
+}
+
+/* Ensure all result content is visible */
+.med-calc-preview-frame .mcm-result > * {
+    flex-shrink: 0;
+}
+
+.med-calc-preview-frame .mcm-tabs,
+.med-calc-preview-frame .mcm-adjust,
+.med-calc-preview-frame .mcm-disclaimer,
+.med-calc-preview-frame .mcm-result-top {
+    width: 100%;
+}
+
+/* Scrollbar for result panel in preview */
+.med-calc-preview-frame .mcm-result-panel::-webkit-scrollbar {
+    width: 8px;
+}
+
+.med-calc-preview-frame .mcm-result-panel::-webkit-scrollbar-track {
+    background: #f5f5f5;
+}
+
+.med-calc-preview-frame .mcm-result-panel::-webkit-scrollbar-thumb {
+    background: #d0d0d0;
+    border-radius: 4px;
+}
+
+.med-calc-preview-frame .mcm-result-panel::-webkit-scrollbar-thumb:hover {
+    background: #b0b0b0;
+}
+
+/* Ensure preview container can accommodate full height */
+.med-calc-preview-container {
+    align-items: flex-start !important;
+}
+
