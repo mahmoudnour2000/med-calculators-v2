@@ -655,9 +655,9 @@ GNU General Public License for more details.
 
 <br/>
 
-[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/mahmoudnour)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/mahmoudnour)
-[![Portfolio](https://img.shields.io/badge/Portfolio-FF5722?style=for-the-badge&logo=google-chrome&logoColor=white)](https://mahmoudnour.dev)
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/mahmoudnour2000)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/mahmoud-noour)
+[![Portfolio](https://img.shields.io/badge/Portfolio-FF5722?style=for-the-badge&logo=google-chrome&logoColor=white)](https://dev-mahmoud-nour-cv.pantheonsite.io/)
 
 </div>
 
@@ -685,10 +685,10 @@ GNU General Public License for more details.
 
 <div align="center">
 
-[![GitHub](https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github)](https://github.com/mahmoudnour/med-calculators-v2)
-[![Documentation](https://img.shields.io/badge/Docs-Wiki-blue?style=for-the-badge&logo=read-the-docs)](https://github.com/mahmoudnour/med-calculators-v2/wiki)
-[![Issues](https://img.shields.io/badge/Issues-Report-red?style=for-the-badge&logo=github)](https://github.com/mahmoudnour/med-calculators-v2/issues)
-[![Releases](https://img.shields.io/badge/Releases-Download-green?style=for-the-badge&logo=github)](https://github.com/mahmoudnour/med-calculators-v2/releases)
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github)](https://github.com/mahmoudnour2000/med-calculators-v2)
+[![Documentation](https://img.shields.io/badge/Docs-Wiki-blue?style=for-the-badge&logo=read-the-docs)](https://github.com/mahmoudnour2000/med-calculators-v2/wiki)
+[![Issues](https://img.shields.io/badge/Issues-Report-red?style=for-the-badge&logo=github)](https://github.com/mahmoudnour2000/med-calculators-v2/issues)
+[![Releases](https://img.shields.io/badge/Releases-Download-green?style=for-the-badge&logo=github)](https://github.com/mahmoudnour2000/med-calculators-v2/releases)
 
 </div>
 
@@ -701,16 +701,15 @@ GNU General Public License for more details.
 ### للتواصل والدعم الفني:
 
 📧 **Email:** mahmoud.nour@developer.com  
-💬 **GitHub Issues:** [Report a Bug](https://github.com/mahmoudnour/med-calculators-v2/issues)  
-📱 **LinkedIn:** [Mahmoud Nour](https://linkedin.com/in/mahmoudnour)  
-🌐 **Portfolio:** [mahmoudnour.dev](https://mahmoudnour.dev)
+💬 **GitHub Issues:** [Report a Bug](https://github.com/mahmoudnour2000/med-calculators-v2/issues)  
+📱 **LinkedIn:** [Mahmoud Nour](https://linkedin.com/in/mahmoud-noour)  
+🌐 **Portfolio:** [mahmoudnour.dev](https://dev-mahmoud-nour-cv.pantheonsite.io/)
 
 ### For Support & Contact:
-
 📧 **Email:** mahmoud.nour@developer.com  
-💬 **GitHub Issues:** [Report a Bug](https://github.com/mahmoudnour/med-calculators-v2/issues)  
-📱 **LinkedIn:** [Mahmoud Nour](https://linkedin.com/in/mahmoudnour)  
-🌐 **Portfolio:** [mahmoudnour.dev](https://mahmoudnour.dev)
+💬 **GitHub Issues:** [Report a Bug](https://github.com/mahmoudnour2000/med-calculators-v2/issues)  
+📱 **LinkedIn:** [Mahmoud Nour](https://linkedin.com/in/mahmoud-noour)  
+🌐 **Portfolio:** [mahmoudnour.dev](https://dev-mahmoud-nour-cv.pantheonsite.io/)
 
 </div>
 
@@ -725,14 +724,14 @@ If you like this plugin, don't forget to star ⭐ the project!
 
 <br/>
 
-<a href="https://github.com/mahmoudnour/med-calculators-v2/stargazers">
-  <img src="https://img.shields.io/github/stars/mahmoudnour/med-calculators-v2?style=social" alt="GitHub stars"/>
+<a href="https://github.com/mahmoudnour2000/med-calculators-v2/stargazers">
+  <img src="https://img.shields.io/github/stars/mahmoudnour2000/med-calculators-v2?style=social" alt="GitHub stars"/>
 </a>
-<a href="https://github.com/mahmoudnour/med-calculators-v2/network/members">
-  <img src="https://img.shields.io/github/forks/mahmoudnour/med-calculators-v2?style=social" alt="GitHub forks"/>
+<a href="https://github.com/mahmoudnour2000/med-calculators-v2/network/members">
+  <img src="https://img.shields.io/github/forks/mahmoudnour2000/med-calculators-v2?style=social" alt="GitHub forks"/>
 </a>
-<a href="https://github.com/mahmoudnour/med-calculators-v2/watchers">
-  <img src="https://img.shields.io/github/watchers/mahmoudnour/med-calculators-v2?style=social" alt="GitHub watchers"/>
+<a href="https://github.com/mahmoudnour2000/med-calculators-v2/watchers">
+  <img src="https://img.shields.io/github/watchers/mahmoudnour2000/med-calculators-v2?style=social" alt="GitHub watchers"/>
 </a>
 
 </div>
